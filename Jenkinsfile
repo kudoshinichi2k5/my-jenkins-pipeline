@@ -11,7 +11,6 @@ pipeline {
             steps {
                 script {
                     dir('2-terraform-eks-deployment') {
-                        sh "rm -rf .terraform .terraform.lock.hcl"
                         sh "terraform init"
                         sh "terraform apply -auto-approve"
                     }
